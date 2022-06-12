@@ -1,0 +1,71 @@
+:root {
+  --color-1: #673ab7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #c6cde0;
+}
+
+body .header {
+  background-color: var(--color-1);
+  padding: 12px 0;
+}
+
+body .header .container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+body .header .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .header .container .row .logo {
+  padding: 0 15px;
+}
+
+body .header .container .row .logo a {
+  font-size: 30px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+body .header .container .row .nav {
+  padding: 0 15px;
+}
+
+body .header .container .row .nav ul {
+  list-style: none;
+}
+
+body .header .container .row .nav ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+body .header .container .align-items {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .header .container .justify-content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=syle.css.map */

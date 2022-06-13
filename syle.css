@@ -19,6 +19,7 @@ body {
 body .header {
   background-color: var(--color-1);
   padding: 12px 0;
+  position: relative;
 }
 
 body .header .container {
@@ -34,6 +35,12 @@ body .header .container .row {
       flex-wrap: wrap;
 }
 
+body .header .container .row #nav-check {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 body .header .container .row .logo {
   padding: 0 15px;
 }
@@ -42,6 +49,14 @@ body .header .container .row .logo a {
   font-size: 30px;
   color: #fff;
   text-transform: capitalize;
+}
+
+body .header .container .row .nav-toggler i {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  margin-right: 30px;
 }
 
 body .header .container .row .nav {
@@ -57,6 +72,24 @@ body .header .container .row .nav ul li {
   margin-left: 40px;
 }
 
+body .header .container .row .nav ul li a {
+  display: block;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 0;
+  text-transform: capitalize;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+body .header .container .row .nav ul li a:hover {
+  color: #fff;
+}
+
+body .header .container .row .nav ul li .active {
+  color: #fff;
+}
+
 body .header .container .align-items {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -67,5 +100,31 @@ body .header .container .justify-content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  body .header .container .row #nav-check:checked ~ .nav {
+    opacity: 1;
+    visibility: visible;
+  }
+  body .header .container .row .nav-toggler i {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .header .container .row .nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: var(--color-1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    visibility: hidden;
+  }
+  body .header .container .row .nav ul li {
+    display: block;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=syle.css.map */
